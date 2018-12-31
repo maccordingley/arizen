@@ -30,7 +30,7 @@ matrix:
       - "8"
   - os: linux
     sudo: required
-    env: TARGET_ARCH=x64 TRAVIS_BUILD_PALTORM=windows
+    env: TARGET_ARCH=x64 TRAVIS_BUILD_PALTORM=windows CC=clang CXX=clang++ npm_config_clang=1 TARGET_ARCH=x64
     language: node_js
     node_js:
       - "8"
