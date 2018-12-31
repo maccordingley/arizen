@@ -4,4 +4,14 @@
 
 set -e
 
-npm run dist
+echo "Before Install Script"
+
+if [[ ${TRAVIS_OS_NAME} == "osx" ]]; then
+     npm run dist
+elif [[ ${TRAVIS_OS_NAME} == "linux" && ${TRAVIS_BUILD_PALTORM} == "windows" ]]; then
+    npm run dist:win32
+elif [[ ${TRAVIS_OS_NAME} == "linux" && ${TRAVIS_BUILD_PALTORM} == "linux" ]]; then
+    npm run dist
+else
+    echo "Unknown OS"
+fi
