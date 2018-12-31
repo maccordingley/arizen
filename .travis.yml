@@ -28,9 +28,9 @@ matrix:
     language: node_js
     node_js:
       - "6"
-  - os: windows
+  - os: linux
     sudo: required
-    env: TARGET_ARCH=x64
+    env: TARGET_ARCH=x64 TRAVIS_BUILD_PALTORM=windows
     language: node_js
     node_js:
       - "6"
