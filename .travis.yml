@@ -38,7 +38,7 @@ matrix:
     node_js:
       - "8"
   - os: osx
-    env: TARGET_ARCH=x64
+    env: TARGET_ARCH=x64 PLATFORM=osx
     osx_image: xcode9.2
     sudo: required
     language: node_js
