@@ -14,7 +14,8 @@ elif [[ ${TRAVIS_OS_NAME} == "linux" ]]; then
     echo "Before install: Linux"
     sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
     sudo apt-get update
-    sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils wine
+    sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils 
+    sudo apt install --install-recommends winehq-stable
 else
     echo "Unknown OS"
 fi
