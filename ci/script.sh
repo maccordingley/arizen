@@ -5,4 +5,6 @@
 set -e
 
 #npm run dist
+
+apt install -y wine
 npx electron-builder build -mwl
