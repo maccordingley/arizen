@@ -8,12 +8,11 @@ set -e
 
 #apt install -y wine
 
-
-if [[ ${TRAVIS_OS_NAME} == "osx" ]] then
+if [[ ${PLATFORM} == "osx" ]]; then
     npx electron-builder build -m
-elif [[ ${TRAVIS_OS_NAME} == "linux" && ${PLATFORM} == "windows"]] then
+elif [[ ${PLATFORM} == "windows" ]]; then
     npx electron-builder build -w
-elif [[ ${TRAVIS_OS_NAME} == "linux" && ${PLATFORM} == "linux"]] then
+elif [[ ${PLATFORM} == "linux" ]]; then
     npx electron-builder build -l
 else
     echo "Unknown OS"
