@@ -4,7 +4,7 @@ set -e
 
 echo "Before Install Script"
 
-if [[ ${TRAVIS_OS_NAME} == "osx" ]]; then
+if [[ ${TRAVIS_OS_NAME} == "osx" ]] then
     echo "Before install: MacOS"
     brew update
     brew install graphviz
