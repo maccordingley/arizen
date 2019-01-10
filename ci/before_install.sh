@@ -15,7 +15,7 @@ elif [[ ${TRAVIS_OS_NAME} == "linux" ]]; then
     sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
     sudo apt-get update
     sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils 
-    sudo apt install --install-recommends winehq-stable
+    sudo apt install --install-recommends --allow-unauthenticated winehq-stable
 else
     echo "Unknown OS"
 fi
