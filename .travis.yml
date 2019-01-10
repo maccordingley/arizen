@@ -22,7 +22,7 @@ env:
 matrix:
   include:
   - os: linux
-    env: CC=clang CXX=clang++ npm_config_clang=1 TARGET_ARCH=x64 PLATFORM=linux
+    env: TARGET_ARCH=x64 PLATFORM=linux
     compiler: clang
     sudo: required
     dist: bionic
@@ -30,7 +30,7 @@ matrix:
     node_js:
       - "8"
   - os: linux
-    env: CC=clang CXX=clang++ npm_config_clang=1 TARGET_ARCH=x64 PLATFORM=windows
+    env: TARGET_ARCH=x64 PLATFORM=windows
     compiler: clang
     sudo: required
     dist: bionic
