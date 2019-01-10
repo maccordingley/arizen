@@ -25,7 +25,7 @@ matrix:
     env: CC=clang CXX=clang++ npm_config_clang=1 TARGET_ARCH=x64
     compiler: clang
     sudo: required
-    dist: trusty
+    dist: bionic
     language: node_js
     node_js:
       - "8"
