@@ -13,6 +13,10 @@ elif [[ ${TRAVIS_OS_NAME} == "windows" ]]; then
 elif [[ ${TRAVIS_OS_NAME} == "linux" ]]; then
     echo "Before install: Linux"
     sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils
+    git clone https://github.com/wine-mirror/wine.git
+    cd wine
+    ./configure
+    sudo make intall
 else
     echo "Unknown OS"
 fi
