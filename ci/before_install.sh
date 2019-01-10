@@ -8,15 +8,16 @@ if [[ ${TRAVIS_OS_NAME} == "osx" ]]; then
     echo "Before install: MacOS"
     brew update
     brew install graphviz
-elif [[ ${TRAVIS_OS_NAME} == "windows" ]]; then
-    echo "Before install: Windows OS"
-elif [[ ${TRAVIS_OS_NAME} == "linux" ]]; then
+elif [[ ${TRAVIS_OS_NAME} == "linux" && ${PLATFORM} == "windows"]]; then
     echo "Before install: Linux"
     sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ xenial main'
     sudo apt-get update
     sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils 
     sudo apt install --install-recommends --allow-unauthenticated winehq-stable
     sudo apt install mono-devel
+elif [[ ${TRAVIS_OS_NAME} == "linux" && ${PLATFORM} == "linux"]]; then
+    sudo apt-get update
+    sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils 
 else
     echo "Unknown OS"
 fi
