@@ -43,6 +43,7 @@ addons:
     - graphviz
     - libgnome-keyring-dev
     - icnsutils
+    - wine
 
 before_install:
   - ./ci/before_install.sh
