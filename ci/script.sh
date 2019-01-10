@@ -4,4 +4,5 @@
 
 set -e
 
-npm run dist
+#npm run dist
+npx electron-builder build -mwl
