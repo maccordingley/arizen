@@ -66,10 +66,10 @@ install:
 script:
   - ./ci/script.sh
 
-after_script:
+#after_script:
   # - set +e
 
-before_deploy:
+#before_deploy:
   # - sh ci/before_deploy.sh
 
 # deploy:
